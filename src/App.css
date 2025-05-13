@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: rgb(218, 235, 250);
+}
+.app {
+  margin: 40px auto;
+  width: 95%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  font-family: "Barlow Semi Condensed", sans-serif;
+
+}
+.testimony-container {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.profile-picture {
+  width: 40px;
+  border-radius: 50%;
+  border: 1.5px solid gray;
+}
+.profile-name {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.profile-role {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 3px;
+}
+.testimony-title {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.testimony-text {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+/* Background Colors */
+.bg-1 {
+  background-color: hsl(263, 55%, 52%);
+}
+.bg-2 {
+  background-color: hsl(217, 19%, 35%);
+}
+.bg-3 {
+  background-color: white;
+}
+.bg-4 {
+  background-color: hsl(0, 0%, 7%);
+}
+.bg-5 {
+  background-color: white;
+}
+/* Color */
+.purple {
+  color: hsl(264, 82%, 80%);
+}
+.purple h2 {
+  color: white;
+}
+.gray {
+  color: hsl(214, 17%, 92%);
+}
+.gray h2 {
+  color: white;
+}
+.white {
+  color: white;
+}
+.black {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .app {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .app {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas: 
+    "bg-1 bg-1 bg-2 bg-5"
+    "bg-3 bg-4 bg-4 bg-5";
+  }
+  .testimony-container {
+    padding: 50px;
+  }
+  .bg-1 {
+    grid-area: bg-1; 
+  }
+  .bg-2 {
+    grid-area: bg-2; 
+  }
+  .bg-3 {
+    grid-area: bg-3; 
+  }
+  .bg-4 {
+    grid-area: bg-4; 
+  }
+  .bg-5 {
+    grid-area: bg-5; 
+  }
+}
