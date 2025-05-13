@@ -1,4 +1,4 @@
-import Testimony from "./testimony";
+import Testimony from "./Testimony.jsx";
 import "./App.css";
 export default function App() {
   return (
